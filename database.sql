@@ -1,0 +1,28 @@
+BEGIN TRANSACTION;
+CREATE TABLE `results` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`people_id`	INTEGER NOT NULL,
+	`quiz_id`	INTEGER NOT NULL,
+	`progress`	TEXT,
+	`answers`	TEXT,
+	`time`	TEXT
+);
+CREATE TABLE "quizes" (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT NOT NULL,
+	`description`	TEXT,
+	`time`	TEXT
+);
+CREATE TABLE `questions` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`quiz_id`	INTEGER NOT NULL,
+	`question`	TEXT NOT NULL,
+	`answers`	TEXT NOT NULL,
+	`right_answer`	TEXT
+);
+CREATE TABLE `people` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`quiz_id`	INTEGER NOT NULL,
+	`nickname`	TEXT NOT NULL
+);
+COMMIT;

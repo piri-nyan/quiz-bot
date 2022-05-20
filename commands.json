@@ -1,0 +1,29 @@
+{
+	"commands": 
+	[
+		{
+			"command": "start",
+			"description": "start the bot"
+		},
+		{
+			"command": "help",
+			"description": "display help"
+		},
+		{
+			"command": "quizes",
+			"description": "list quizes"
+		},
+		{
+			"command": "start_quiz",
+			"description": "starts the quiz with provided id"
+		},
+		{
+			"command": "create_quiz",
+			"description": "create quiz"
+		},
+		{
+			"command": "show_stats",
+			"description": "shows resultats of quiz with provided id"
+		}
+	]
+}
